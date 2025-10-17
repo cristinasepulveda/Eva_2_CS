@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Categorías - Mi Manga BL{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2 class="mb-4">Categorías disponibles</h2>
+  <div class="row">
+    {% for c in categorias %}
+      <div class="col-md-4 mb-3">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{ c.nombre_cat }}</h5>
+            <a href="{% url 'categoria_detalle' c.id %}" class="btn btn-dark">Ver productos</a>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p>No hay categorías disponibles.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
