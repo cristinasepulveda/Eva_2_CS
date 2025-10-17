@@ -1,0 +1,17 @@
+# Ignorar el entorno virtual
+venv/
+env/
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+
+# Base de datos local (opcional, si no necesitas subirla)
+*.sqlite3
+
+# Configuración de VSCode
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
